@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
     {
         /* Note: You will need to edit this function in the animation section, the enemy section, and in the sound section.*/
         isAttacking = true;
-        PlayerRB.velocity = Vector2.zero;
+        PlayerRB.linearVelocity = Vector2.zero;
         anim.SetTrigger("Attack");
         yield return new WaitForSeconds(hitboxTiming);
         Debug.Log("Casting hitbox now");
