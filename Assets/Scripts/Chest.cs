@@ -14,7 +14,10 @@ public class Chest : MonoBehaviour
     IEnumerator DestroyChest()
     {
         /* TODO Part 6.2: Instantiate the health potion at the chest's location and destroy the chest. */
-        yield return null;
+        // yield return null;
+        yield return new WaitForSeconds(.3f);
+        Instantiate(healthPotion, transform.position, transform.rotation);
+        Destroy(this.gameObject);
     }
 
     public void Open()

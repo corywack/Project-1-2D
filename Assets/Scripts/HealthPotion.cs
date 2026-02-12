@@ -17,6 +17,12 @@ public class HealthPack : MonoBehaviour
          * After healing this health potion should be destroyed.
          * HINT: The variable, other, contains a reference to the object that collides with this health potion. */
 
+         if(other.transform.CompareTag("Player"))
+        {
+            other.transform.GetComponent<PlayerController>().Heal(healAmount);
+            Destroy(this.gameObject);
+        }
+
     }
     #endregion
 }
